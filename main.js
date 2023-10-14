@@ -77,6 +77,8 @@ class student {
     }
 }
 
+
+
 class horary {
     constructor(code_course, code_student, day, hour_init, hour_finish){
         this.code_course = code_course;
@@ -199,11 +201,12 @@ function modify_course(code_course){
     let modal = document.getElementById("modal_course")
     let inputs = modal.querySelectorAll("input")
     let course = ""
-        for(let i = 0; i < courses.length; i++){
-            if(courses[i].code == code_course){
-                course = courses[i]
-            }
+
+    for(let i = 0; i < courses.length; i++){
+        if(courses[i].code == code_course){
+            course = courses[i]
         }
+    }
 
     let confirm = true
     inputs.forEach(input => {
